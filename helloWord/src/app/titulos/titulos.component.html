@@ -1,0 +1,18 @@
+<h1>Hola {{nombre}} {{apellido}}</h1>
+<h2>hola alumno {{alumno.nombre}} {{alumno.apellido}}</h2>
+
+<img [src]="imagen" alt="" srcset="">
+<br>
+
+
+<input type='text' [(ngModel)]='inputNuevo'>
+<p>{{inputNuevo}}</p>
+<label for="">correo : 
+<input type="text" [(ngModel)]='correo'>
+</label>
+<br>
+<br>
+<label for="">password : 
+<input type="password" [(ngModel)]='password'>
+</label>
+<button (click)="ingresar()">iniciar</button>
