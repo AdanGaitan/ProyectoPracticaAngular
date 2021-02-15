@@ -1,0 +1,33 @@
+<!-- <div *ngIf="!cargando">
+    <p>hola termino de cagar</p>
+</div>
+
+
+<img *ngIf="cargando" src="https://media1.tenor.com/images/3f8b9aec89d8fc5395f3ad3d82f0d697/tenor.gif?itemid=14560182" alt="" srcset="">
+
+<button (click)="alternar()">alternar</button>
+ -->
+
+<!--  <div *ngFor="let nombre of nombres">
+     <p>Hola mi nombre es : {{nombre}}</p>
+ </div> -->
+
+ <div *ngFor="let producto of productos" class="producto">
+     <p>El Producto es : {{producto.nombre}} </p>
+     <p>Su Stock es: {{producto.stock}} </p>
+     <p>Su fabricante es: {{producto.fabricante}} </p>
+     <p>Su fecha de Vencimiento es: {{producto.fechaVence}} </p>
+ </div>
+
+ <div class="tab" [ngSwitch]="pestana">
+     <button (click)= "this.cambiarPestana('perfil')">Perfil</button>
+     <button (click)= "this.cambiarPestana('puntos')">Puntos</button>
+     <button (click)= "this.cambiarPestana('info')">Info</button>
+
+     <div class="tabContenido">
+         <p *ngSwitchCase="'perfil'">Este es el perfil</p>
+         <p *ngSwitchCase="'puntos'">Este son los puntos</p>
+         <p *ngSwitchCase="'info'">Este es la info</p>
+         <p *ngSwitchDefault>Seleccione una pestaña</p>
+     </div>
+ </div>
