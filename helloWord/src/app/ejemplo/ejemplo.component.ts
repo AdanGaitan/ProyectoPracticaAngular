@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 class Alumno{
-  nombre: string;
-  apellido: string;
+  nombre: string="";
+  apellido: string="";
+  
 
-  constructor(){
-    this.nombre=this.nombre;
-    this.apellido=this.apellido;
-  }
+  
 }
 
 
