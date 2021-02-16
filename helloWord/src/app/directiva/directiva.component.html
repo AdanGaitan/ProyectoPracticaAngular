@@ -11,7 +11,7 @@
 <!--  <div *ngFor="let nombre of nombres">
      <p>Hola mi nombre es : {{nombre}}</p>
  </div> -->
-
+<!-- 
  <div *ngFor="let producto of productos" class="producto">
      <p>El Producto es : {{producto.nombre}} </p>
      <p>Su Stock es: {{producto.stock}} </p>
@@ -30,4 +30,16 @@
          <p *ngSwitchCase="'info'">Este es la info</p>
          <p *ngSwitchDefault>Seleccione una pestaña</p>
      </div>
+ </div> -->
+<button (click)="alternarFondo()">Alternar</button>
+
+ <div [ngClass]="{ 'cuadrado': mostrarCuadrado}">
+     <p>este deberia de aparecer con un fondo verde</p>
  </div>
+
+ <div *ngFor="let producto of productos" class="producto">
+    <p [ngClass]="{ 'textoImportante': producto.esImportante}">El Producto es : {{producto.nombre}} </p>
+    <p>Su Stock es: {{producto.stock}} </p>
+    <p>Su fabricante es: {{producto.fabricante}} </p>
+    <p>Su fecha de Vencimiento es: {{producto.fechaVence}} </p>
+</div>

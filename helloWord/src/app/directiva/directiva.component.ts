@@ -5,6 +5,7 @@ interface Producto{
   stock:number;
   fabricante:string;
   fechaVence:Date;
+  esImportante:boolean;
 }
 
 
@@ -18,24 +19,29 @@ export class DirectivaComponent implements OnInit {
   cargando: boolean=true;
   nombres : Array<string>=["Maria","Ana","Juan","Pedro"];
   pestana:string="";
+  mostrarCuadrado:boolean = false;
+
   productos : Array<Producto>=[
     {
       nombre: 'Arroz',
       stock:15,
       fabricante : 'Distribuidor Industrial',
-      fechaVence: new Date('04/15/2021')
+      fechaVence: new Date('04/15/2021'),
+      esImportante: true
     },
     {
       nombre: 'Fideos',
       stock:20,
       fabricante : 'Merolio',
-      fechaVence: new Date('07/15/2021')
+      fechaVence: new Date('07/15/2021'),
+      esImportante: false
     },
     {
       nombre: 'Polenta',
       stock:200,
       fabricante : 'Distribuidor Industrial',
-      fechaVence: new Date('04/20/2021')
+      fechaVence: new Date('04/20/2021'),
+      esImportante: false
     }
 
   ]
@@ -59,6 +65,10 @@ export class DirectivaComponent implements OnInit {
   cambiarPestana(pestana:string){
     this.pestana=pestana;
 
+  }
+
+  alternarFondo(){
+    this.mostrarCuadrado = !this.mostrarCuadrado;
   }
 
 }

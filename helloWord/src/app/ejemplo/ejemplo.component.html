@@ -1,0 +1,22 @@
+<div class="container">
+    <form action="">
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" class="form-control" [(ngModel)="alumno.nombre"]>
+        </div>
+    </form>
+    <form action="">
+        <div class="form-group">
+            <label for="apellido">Apellido </label>
+            <input type="text" name="apellido" class="form-control" [(ngModel)="alumno.apellido"]>
+        </div>
+        <button class="btn btn-primary" (click)="agregar()">Agregar</button>
+    </form>
+
+    <div class="card">
+        <div class="card-body">
+            alumnos: nombre
+        </div>
+    </div>
+
+</div>
