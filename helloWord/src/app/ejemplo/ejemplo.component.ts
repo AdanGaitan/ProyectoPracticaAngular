@@ -3,9 +3,9 @@ import { Component, OnInit } from '@angular/core';
 class Alumno{
   nombre: string="";
   apellido: string="";
-  
+  excelencia:Boolean=true;
 
-  
+   
 }
 
 
@@ -16,8 +16,8 @@ class Alumno{
 })
 export class EjemploComponent implements OnInit {
 
-  
-
+  alumno: Alumno = new Alumno();
+  listadoAlumnos:Array<Alumno>=new Array<Alumno>();
 
   constructor() { }
 
@@ -27,11 +27,16 @@ export class EjemploComponent implements OnInit {
   agregar(){
     this.listadoAlumnos.push({
       nombre:this.alumno.nombre,
-      apellido:this.alumno.apellido
+      apellido:this.alumno.apellido,
+      excelencia:this.alumno.excelencia
     })
+    this.alumno.nombre='';
+    this.alumno.apellido='';
+    
 
   }
-  alumno: Alumno = new Alumno();
-  listadoAlumnos:Array<Alumno>=new Array<Alumno>();
+ 
+   
+
 
 }
