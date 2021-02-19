@@ -8,7 +8,14 @@ import {FormsModule} from '@angular/forms';
 import { DirectivaComponent } from './directiva/directiva.component';
 import { EjemploComponent } from './ejemplo/ejemplo.component';
 import { PipesComponent } from './pipes/pipes.component';
-import { ContinuaraPipe } from './continuara.pipe'
+import { ContinuaraPipe } from './continuara.pipe';
+import { Pagina404Component } from './pagina404/pagina404.component';
+import { EncabezadoComponent } from './encabezado/encabezado.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { AgregarUsuarioComponent } from './agregar-usuario/agregar-usuario.component';
+import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.component';
+import { ArticuloComponent } from './articulo/articulo.component';
+import { ArticuloDetalleComponent } from './articulo-detalle/articulo-detalle.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +23,14 @@ import { ContinuaraPipe } from './continuara.pipe'
     DirectivaComponent,
     EjemploComponent,
     PipesComponent,
-    ContinuaraPipe
+    ContinuaraPipe,
+    Pagina404Component,
+    EncabezadoComponent,
+    UsuariosComponent,
+    AgregarUsuarioComponent,
+    EditarUsuarioComponent,
+    ArticuloComponent,
+    ArticuloDetalleComponent
   ],
   imports: [
     BrowserModule,

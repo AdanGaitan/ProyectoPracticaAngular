@@ -12,7 +12,7 @@ export class ContinuaraPipe implements PipeTransform {
     {
       valor = valor.substr(0,140)
     }
-    valor=valor + ' continuara...'
+    valor=valor + ' continuara...';
     return valor;
   }
   
